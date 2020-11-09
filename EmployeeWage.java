@@ -42,6 +42,21 @@ public class EmployeeWage {
 		attandance();
 		fullDaily();
 		partTime();
+		
+		int i=(int)(Math.random()*10)%3;
+	switch(i) {
+	
+	case 1:
+		fullDaily();
+		break;
+		
+	case 2:
+		partTime();
+		break;
+		
+	default :
+		System.out.println("Invalid");
+	}
 	
 	}
 
