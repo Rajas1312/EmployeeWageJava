@@ -45,6 +45,19 @@ public class EmployeeWage {
 		System.out.println("The monthly wage is " +month_wage);
 		
 	}
+	public void totalWorking() {
+	
+		int working_hrs=0;
+		int wage=0;
+		while(  working_hrs<=100) {
+			
+			int wage_perhour=20;
+			 wage=wage_perhour*working_hrs;
+			working_hrs++;
+			
+		}
+		System.out.println("The wage until the condition is reached is" +wage);
+	}
 
 	public static void main(String[] args) {
 		EmployeeWage e=new EmployeeWage();
@@ -68,6 +81,7 @@ public class EmployeeWage {
 	}
 	
 		e.monthWage();
+		e.totalWorking();
 	}
 
 }
