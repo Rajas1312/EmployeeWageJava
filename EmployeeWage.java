@@ -23,7 +23,7 @@ public class EmployeeWage {
 		
 	}
 	
-	public  void fullDaily() {
+	public void fullDaily() {
 		
 		int wage_perhour=20;
 		int full_time_hr=8;
@@ -82,6 +82,20 @@ public class EmployeeWage {
 	
 		e.monthWage();
 		e.totalWorking();
+		DailyWage w=new DailyWage();
+		w.fullDaily();
 	}
-
+}
+class DailyWage{
+	
+	int daily_wage;
+	
+public void fullDaily() {
+		
+		int wage_perhour=20;
+		int full_time_hr=8;
+		this.daily_wage=wage_perhour*full_time_hr;
+		System.out.println("the full time daily wage is  " +daily_wage);
+	}
+	
 }
