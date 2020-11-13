@@ -58,7 +58,27 @@ public class EmployeeWage {
 		}
 		System.out.println("The wage until the condition is reached is" +wage);
 	}
+	public void getWageCompany1(int working_hrs,int wage_per_hr,int workingDays) {
+		
+		
+		int dailyWage=working_hrs*wage_per_hr;
+		System.out.println("Employee wage in company1 is "+dailyWage);
+		int monthlyWage=dailyWage*workingDays;
+		System.out.println("Monthly Wage in company1 is "+monthlyWage);
+		
+	}
+	
+	public void getWageCompany2(int working_hrs,int wage_per_hr,int workingDays) {
+		
+		
+		int dailyWage=working_hrs*wage_per_hr;
+		System.out.println("Employee wage in company1 is "+dailyWage);
+		int monthlyWage=dailyWage*workingDays;
+		System.out.println("Monthly Wage in company1 is "+monthlyWage);
+		
+	}
 
+	
 	public static void main(String[] args) {
 		EmployeeWage e=new EmployeeWage();
 		greet();
@@ -84,6 +104,8 @@ public class EmployeeWage {
 		e.totalWorking();
 		DailyWage w=new DailyWage();
 		w.fullDaily();
+		e.getWageCompany1(8,20,20);
+		e.getWageCompany2(6,15,20);
 	}
 }
 class DailyWage{
