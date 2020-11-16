@@ -77,6 +77,30 @@ public class EmployeeWage {
 		System.out.println("Monthly Wage in company1 is "+monthlyWage);
 		
 	}
+	
+	public void getWageCompany1() {
+		
+		int working_hrs=8;
+		int wage_per_hr=20;
+		int workingDays=20;
+		int dailyWage=working_hrs*wage_per_hr;
+		System.out.println("Employee wage in company1 using instance is "+dailyWage);
+		int monthlyWage=dailyWage*workingDays;
+		System.out.println("Monthly Wage in company1 using instance is "+monthlyWage);
+		
+	}
+	
+	public void getWageCompany2() {
+		
+		int working_hrs=8;
+		int wage_per_hr=20;
+		int workingDays=20;
+		int dailyWage=working_hrs*wage_per_hr;
+		System.out.println("Employee wage in company2 using instance is "+dailyWage);
+		int monthlyWage=dailyWage*workingDays;
+		System.out.println("Monthly Wage in company2 using instance is "+monthlyWage);
+		
+	}
 
 	
 	public static void main(String[] args) {
@@ -106,6 +130,8 @@ public class EmployeeWage {
 		w.fullDaily();
 		e.getWageCompany1(8,20,20);
 		e.getWageCompany2(6,15,20);
+		e.getWageCompany1();
+		e.getWageCompany2();
 	}
 }
 class DailyWage{
