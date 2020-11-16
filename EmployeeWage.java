@@ -1,6 +1,6 @@
 package employewage;
 
-public class EmployeeWage extends CompanyEmpWage {
+public class EmployeeWage extends CompanyEmpWage implements CompanyWage {
 	
 	int daily_wage;
 	
@@ -132,12 +132,41 @@ public class EmployeeWage extends CompanyEmpWage {
 		e.getWageCompany2(6,15,20);
 		e.getWageCompany1();
 		e.getWageCompany2();
+		
 		int[]companyWage= {company1Wage,company2Wage};
 		for (int i1: companyWage) {
 			System.out.println(i1);
 			
 		}
+		
+		e.getCompany1();
+		e.getCompany2();
 	}
+
+	@Override
+	public void getCompany1() {
+		int working_hrs=8;
+		int wage_per_hr=20;
+		int workingDays=20;
+		int dailyWage=working_hrs*wage_per_hr;
+		System.out.println("Employee wage in company1 using instance is "+dailyWage);
+		int monthlyWage=dailyWage*workingDays;
+		System.out.println("Monthly Wage in company1 using instance is "+monthlyWage);
+		
+	}
+
+	@Override
+	public void getCompany2() {
+		int working_hrs=8;
+		int wage_per_hr=20;
+		int workingDays=20;
+		int dailyWage=working_hrs*wage_per_hr;
+		System.out.println("Employee wage in company2 using instance is "+dailyWage);
+		int monthlyWage=dailyWage*workingDays;
+		System.out.println("Monthly Wage in company2 using instance is "+monthlyWage);
+		
+	}
+	
 }
 class DailyWage{
 	
@@ -156,4 +185,9 @@ class CompanyEmpWage{
 	
 	static int company1Wage=3200;
 	static int company2Wage=3000;
+}
+interface CompanyWage{
+	
+	public void getCompany1();
+	public void getCompany2();
 }
