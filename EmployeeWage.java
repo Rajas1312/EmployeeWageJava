@@ -1,6 +1,7 @@
 package employewage;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class EmployeeWage extends CompanyEmpWage implements CompanyWage {
 	
@@ -147,6 +148,16 @@ public class EmployeeWage extends CompanyEmpWage implements CompanyWage {
 		companyWageArrayList.add(company1Wage);
 		companyWageArrayList.add(company2Wage);
 		System.out.println(companyWageArrayList);
+		System.out.println("Daily wage of companies are ");
+		HashMap<String,Integer> daily_totalWage=new HashMap<String,Integer>();
+		daily_totalWage.put("Company1",160);
+		daily_totalWage.put("Company2",150);
+		System.out.println(daily_totalWage);
+		System.out.println("Total wage of the companies are ");
+		daily_totalWage.clear();
+		daily_totalWage.put("company1",3200);
+		daily_totalWage.put("company2",3000);
+		System.out.println(daily_totalWage);
 	}
 
 	@Override
