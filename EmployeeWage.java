@@ -1,5 +1,7 @@
 package employewage;
 
+import java.util.ArrayList;
+
 public class EmployeeWage extends CompanyEmpWage implements CompanyWage {
 	
 	int daily_wage;
@@ -141,6 +143,10 @@ public class EmployeeWage extends CompanyEmpWage implements CompanyWage {
 		
 		e.getCompany1();
 		e.getCompany2();
+		ArrayList<Integer> companyWageArrayList=new ArrayList<Integer>();
+		companyWageArrayList.add(company1Wage);
+		companyWageArrayList.add(company2Wage);
+		System.out.println(companyWageArrayList);
 	}
 
 	@Override
