@@ -104,6 +104,14 @@ public class EmployeeWage extends CompanyEmpWage implements CompanyWage {
 		System.out.println("Monthly Wage in company2 using instance is "+monthlyWage);
 		
 	}
+	public void getTotalCompanyWage() {
+		
+		System.out.println("Total wage of compannies using method");
+		HashMap<String,Integer> totalWage=new HashMap<String,Integer>();
+		totalWage.put("company1", 3200);
+		totalWage.put("Company2", 3000);
+		System.out.println(totalWage);
+	}
 
 	
 	public static void main(String[] args) {
@@ -158,6 +166,7 @@ public class EmployeeWage extends CompanyEmpWage implements CompanyWage {
 		daily_totalWage.put("company1",3200);
 		daily_totalWage.put("company2",3000);
 		System.out.println(daily_totalWage);
+		e.getTotalCompanyWage();
 	}
 
 	@Override
