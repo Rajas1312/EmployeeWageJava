@@ -1,6 +1,6 @@
 package employewage;
 
-public class EmployeeWage {
+public class EmployeeWage extends CompanyEmpWage {
 	
 	int daily_wage;
 	
@@ -132,6 +132,11 @@ public class EmployeeWage {
 		e.getWageCompany2(6,15,20);
 		e.getWageCompany1();
 		e.getWageCompany2();
+		int[]companyWage= {company1Wage,company2Wage};
+		for (int i1: companyWage) {
+			System.out.println(i1);
+			
+		}
 	}
 }
 class DailyWage{
@@ -146,4 +151,9 @@ public void fullDaily() {
 		System.out.println("the full time daily wage is  " +daily_wage);
 	}
 	
+}
+class CompanyEmpWage{
+	
+	static int company1Wage=3200;
+	static int company2Wage=3000;
 }
